@@ -1,4 +1,16 @@
-# Vue 3 + Vite
+# Case Study
+
+Answer of the bonus question:
+
+<code>const extractData = (data, index) => {
+  const newData = data.filter((item, i) => i !== index);
+  return newData.map(item => item.name);
+}
+const result = extractData(data, 2);
+console.log(result); // ['user 1', 'user 2', 'user 4', 'user 5', 'user 6']
+</code>
+
+## Vue 3 + Vite
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
