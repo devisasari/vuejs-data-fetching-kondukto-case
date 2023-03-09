@@ -18,7 +18,6 @@ export const usePostStore = defineStore("post", {
           }
           catch (error) {
             alert(error)
-            console.log(error)
         }
       }
     },
