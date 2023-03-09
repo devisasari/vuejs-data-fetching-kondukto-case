@@ -1,29 +1,21 @@
-<template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>{{ msg }}</h1>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>User Id</th>
-              <th>Id</th>
-              <th>Title</th>
-              <th>Body</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="post in getPosts" :key="post.id">
-              <td>{{ post.userId }}</td>
-              <td>{{ post.id }}</td>
-              <td>{{ post.title }}</td>
-              <td>{{ post.body }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+div.container
+  div.row
+    div.col
+      h1 {{ msg }}
+      table.table.table-striped
+        thead
+          tr
+            th UserId
+            th Id
+            th Title
+            th Body
+        tbody
+          tr(v-for="post in getPosts" :key="post.id")
+            td {{ post.userId }}
+            td {{ post.id }}
+            td {{ post.title }}
+            td {{ post.body }}
 </template>
 
 <script setup>
@@ -47,6 +39,8 @@ onMounted(() => {
 table {
   border-collapse: collapse;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   th {
     border: 1px solid #ddd;
     padding: 8px;
